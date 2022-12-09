@@ -1,0 +1,48 @@
+package Packet;
+
+import java.util.Scanner;
+
+public class Main {
+
+	// Calculating Body Mass Index
+	
+	// BMI = Weight (kg) / Height(meter) * Height(meter) 
+	
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Type your kilogram: (exp.75)");
+		
+		int kg = scan.nextInt();
+		
+		System.out.println("Type your height by meter: (exp. 1,72)");
+		
+		double hg = scan.nextDouble();
+		
+		double BMI =  kg/(hg*hg);
+		
+		
+		if(BMI <18.5) {
+			
+			System.out.println("Your body mass index: " + (int)BMI + " 'Low Weight'");
+		}
+		else if(BMI >= 18.5 && BMI <=24.99) {
+			
+			System.out.println("Your body mass index: " + (int)BMI + " 'Normal Weight'");	
+		}
+		else if(BMI >=25 && BMI <=29.99) {
+			
+			System.out.println("Your body mass index: " + (int)BMI + " 'Overweight'");
+		}
+		else if(BMI >=30) {
+			
+			System.out.println("Your body mass index: " + (int)BMI + " 'Obesity Risk'");
+		}
+		
+		
+	}
+	
+ }
+	
+	
